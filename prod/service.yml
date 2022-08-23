@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-08-20T19:37:23Z"
+  labels:
+    app: main-app
+  name: main-app
+  namespace: default
+  resourceVersion: "61119"
+  uid: 50241916-f835-45c7-9618-ef6081a075d2
+spec:
+  clusterIP: 10.98.118.63
+  clusterIPs:
+    - 10.98.118.63
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - nodePort: 30483
+      port: 3030
+      protocol: TCP
+      targetPort: 3030
+  selector:
+    app: main-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
