@@ -21,7 +21,7 @@ spec:
         app: main-app
     spec:
       containers:
-        - image: sulikoks/k8s-demo:v1.0.12
+        - image: sulikoks/k8s-demo:v1.0.13
           imagePullPolicy: IfNotPresent
           name: k8s-demo
           resources: {}
