@@ -26,6 +26,10 @@ spec:
           name: k8s-demo
           resources: {}
           env:
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             - name: DEMO_GREETING
               value: "Hello from the environment"
             - name: DEMO_FAREWELL
