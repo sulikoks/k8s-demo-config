@@ -25,5 +25,10 @@ spec:
           imagePullPolicy: IfNotPresent
           name: k8s-demo
           resources: {}
+          env:
+            - name: DEMO_GREETING
+              value: "Hello from the environment"
+            - name: DEMO_FAREWELL
+              value: "Such a sweet sorrow"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
